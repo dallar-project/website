@@ -1,0 +1,85 @@
+@mixin positioning ($pos, $top: auto, $right: auto, $bottom: auto, $left: auto) {
+    position: $pos;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin pull($direction) {
+    float: $direction;
+}
+
+@mixin extend-to($direction) {
+    @if $direction == height {
+        height: 100%;
+    }
+    @else if $direction == width {
+        width: 100%;
+    }
+    @else if $direction == all {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@mixin font-size($sizeValue: 12 ){
+    font-size: $sizeValue + px; //fallback for old browsers
+    font-size: (0.125 * $sizeValue) + em;
+}
+
+@mixin transition($args) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin box-sizing($box-model) {
+    -webkit-box-sizing: $box-model; // Safari <= 5
+    -moz-box-sizing: $box-model; // Firefox <= 19
+    box-sizing: $box-model;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin linear-gradient($color-1, $color-2) {
+    background:-webkit-linear-gradient($color-1, $color-2);
+    background:   -moz-linear-gradient($color-1, $color-2);
+    background:    -ms-linear-gradient($color-1, $color-2);
+    background:     -o-linear-gradient($color-1, $color-2);
+    background:        linear-gradient($color-1, $color-2);
+}
+
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

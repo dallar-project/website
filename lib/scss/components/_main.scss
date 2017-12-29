@@ -1,0 +1,9 @@
+.sect {
+    position: relative;
+    height: 100vh;
+    background: darken($background, 1%);
+    z-index: 2;
+    &--alt {
+        background: $background;
+    }
+}

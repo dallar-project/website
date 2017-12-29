@@ -1,2 +1,1 @@
-# dallarwebsite
-Website for Dallar
+# Dallar README

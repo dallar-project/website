@@ -1,0 +1,31 @@
+$width: 95%;
+$min-width: 800px;
+$max-width: 1120px;
+
+$height-header: 55px;
+$padding-header: 75px;
+
+$flex-social: 1;
+$flex-logo: 2.5;
+$flex-nav: 2;
+
+$grid-columns: 12;
+$gutter-size: 1em;
+$row-gutter-size: 2em;
+$section-margin-bottom: 2em;
+
+$background: #121212;
+$gold: darken(#FFD700, 5%);
+$hero: #0f0f0f;
+
+$twitch: #6441a5;
+$twitter: #4099FF;
+$youtube: #c4302b;
+
+$color-hoverbackground: darken(white, 8%);
+$color-socialdivider: 1px solid lighten($background, 14%);
+
+$text-navsize: 0.75em;
+
+$status-consultancy: #9494e6;
+$status-freelance: #ffba00;
