@@ -21,7 +21,7 @@
     }
 
     &__left {
-        flex: 1.5;
+        flex: 1.4;
 
         span, .title, .tag {
             @include respond-to('tablet') { display: block; }

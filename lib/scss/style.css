@@ -47,14 +47,15 @@ body, html {
   background: #121212;
   font-family: 'Abel', sans-serif;
   color: white;
-  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3); }
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+  height: 5000px; }
 
 small {
   font-size: 0.8em;
   padding: 20px 0; }
 
 p {
-  font-size: 1.0em;
+  font-size: 1.3em;
   line-height: 1.45em;
   color: white; }
 
@@ -90,6 +91,12 @@ h3 {
 .center {
   text-align: center; }
 
+.cf:before, .cf:after {
+  content: "";
+  display: table; }
+.cf:after {
+  clear: both; }
+
 .row {
   padding: 25px 0; }
 
@@ -101,6 +108,9 @@ h3 {
     margin: 0 10px;
     height: 100%;
     text-align: center; }
+    @media only screen and (max-width: 550px) {
+      .nav__li {
+        display: none; } }
     .nav__li:first-child {
       margin-left: 0;
       margin-right: 10px; }
@@ -109,27 +119,68 @@ h3 {
       margin-right: 0; }
     .nav__li:hover {
       background: #2c2c2c;
-      cursor: pointer;
-      border-radius: 2px; }
+      border-radius: 2px;
+      cursor: pointer; }
     .nav__li--selected {
       background: linear-gradient(#e6c200, #ccac00);
       border-radius: 2px;
       cursor: pointer;
-      color: #121212; }
+      color: #121212;
+      flex: 2; }
       .nav__li--selected:hover {
-        background: #ccac00; }
+        background: gold; }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 4;
   display: flex;
   background: #171717;
-  padding: 5px; }
+  padding: 5px 15px; }
+  @media only screen and (max-width: 550px) {
+    .header {
+      position: relative; } }
+  @media only screen and (min-width: 551px) and (max-width: 1119px) {
+    .header {
+      position: relative; } }
+  @media only screen and (min-width: 1120px) {
+    .header {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0; } }
+  @media only screen and (min-width: 551px) and (max-width: 1119px) {
+    .header {
+      flex-direction: column;
+      text-align: center; } }
+  @media only screen and (max-width: 550px) {
+    .header {
+      flex-direction: column;
+      text-align: center; } }
   .header__left {
     flex: 1.5; }
-    .header__left span {
-      float: left; }
+    @media only screen and (min-width: 551px) and (max-width: 1119px) {
+      .header__left span, .header__left .title, .header__left .tag {
+        display: block; } }
+    @media only screen and (min-width: 1120px) {
+      .header__left span, .header__left .title, .header__left .tag {
+        float: left; } }
     .header__left .title {
-      font-size: 1.1em;
-      margin-right: 15px; }
+      font-size: 1.1em; }
+      @media only screen and (max-width: 550px) {
+        .header__left .title {
+          margin-right: 0;
+          display: block; } }
+      @media only screen and (min-width: 551px) and (max-width: 1119px) {
+        .header__left .title {
+          margin-right: 0;
+          display: block; } }
+      @media only screen and (min-width: 1120px) {
+        .header__left .title {
+          margin-right: 15px;
+          display: inline-block; } }
     .header__left .tag {
       font-size: 0.45em;
       color: #cccccc; }
@@ -142,16 +193,43 @@ h3 {
 
 .hero {
   position: relative;
-  height: 70vh;
+  min-height: 65vh;
   overflow: hidden; }
+  @media only screen and (min-width: 1120px) {
+    .hero {
+      margin-top: 60px; } }
+  @media only screen and (min-width: 551px) and (max-width: 1119px) {
+    .hero {
+      margin-top: 50px;
+      padding-bottom: 50px; } }
+  @media only screen and (max-width: 550px) {
+    .hero {
+      margin-top: 70px;
+      padding-bottom: 50px;
+      min-height: 600px; } }
+  .hero .row {
+    padding: 0; }
   .hero__inner {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    transform: translateY(-50%);
+    position: relative;
+    z-index: 2;
     text-align: center;
     z-index: 1; }
+    @media only screen and (min-width: 1120px) {
+      .hero__inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%); } }
+    @media only screen and (min-width: 551px) and (max-width: 1119px) {
+      .hero__inner {
+        margin: 0 40px; } }
+    @media only screen and (max-width: 550px) {
+      .hero__inner {
+        margin: 0 40px; } }
+    .hero__inner h2 {
+      line-height: 1em;
+      margin-top: 20px; }
     .hero__inner img {
       max-height: 200px; }
   .hero__buttons {
@@ -159,6 +237,12 @@ h3 {
     margin: 0 auto;
     display: flex;
     margin-top: 20px; }
+    @media only screen and (max-width: 550px) {
+      .hero__buttons {
+        flex-direction: column; } }
+    @media only screen and (min-width: 551px) and (max-width: 1119px) {
+      .hero__buttons {
+        flex-direction: column; } }
     .hero__buttons__button {
       flex: 1;
       font-size: 1.1em;
@@ -170,12 +254,19 @@ h3 {
       .hero__buttons__button:hover {
         color: #121212;
         background: white; }
-      .hero__buttons__button:first-child {
-        margin-left: 10px;
-        margin-right: 0; }
-      .hero__buttons__button:first-child {
-        margin-right: 10px;
-        margin-left: 0; }
+      @media only screen and (min-width: 1120px) {
+        .hero__buttons__button:first-child {
+          margin-left: 30px;
+          margin-right: 0; }
+        .hero__buttons__button:first-child {
+          margin-right: 30px;
+          margin-left: 0; } }
+      @media only screen and (max-width: 550px) {
+        .hero__buttons__button:first-child {
+          margin-bottom: 20px; } }
+      @media only screen and (min-width: 551px) and (max-width: 1119px) {
+        .hero__buttons__button:first-child {
+          margin-bottom: 20px; } }
       .hero__buttons__button--highlighted {
         background: linear-gradient(#e6c200, #ccac00);
         border-radius: 2px;
@@ -183,11 +274,11 @@ h3 {
         color: #121212;
         border: 1px solid #e6c200; }
         .hero__buttons__button--highlighted:hover {
-          background: #ccac00;
+          background: gold;
           border: 1px solid #ccac00; }
   .hero__scroll {
     opacity: 1;
-    position: absolute;
+    position: fixed;
     /* make BG larger than container */
     height: 400%;
     width: 400%;
@@ -196,7 +287,7 @@ h3 {
     left: -125%;
     z-index: 0;
     background: url("../images/herobg.jpg") repeat;
-    animation: backgroundScroll 16s linear infinite;
+    animation: backgroundScroll 60s linear infinite;
     transform: rotate(45deg) scale(1);
     transform-origin: center center; }
 
@@ -206,5 +297,12 @@ h3 {
   100% {
     /* pattern bg texture is 1000x1000px */
     background-position: 0 -1000px; } }
+.sect {
+  position: relative;
+  height: 100vh;
+  background: #0f0f0f;
+  z-index: 2; }
+  .sect--alt {
+    background: #121212; }
 
 /*# sourceMappingURL=style.css.map */

@@ -26,11 +26,15 @@
 
     &__buttons {
         max-width: 500px;
+        &--alt { margin: 0; margin-top: 30px; }
         margin: 0 auto;
         display: flex;
         margin-top: 20px;
         @include respond-to('mobile') { flex-direction: column; }
         @include respond-to('tablet') { flex-direction: column; }
+        a {
+            flex: 1;
+        }
         &__button {
             flex: 1;
             font-size: 1.1em;

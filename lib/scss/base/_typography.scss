@@ -6,14 +6,15 @@ small {
     padding: 20px 0;
 }
 p {
-    font-size: 1.0em;
+    font-size: 1.35em;
     line-height: 1.45em;
     color: white;
+    margin: 10px 0;
 }
 b {}
 a {
     text-decoration: none;
-    color: orange;
+    color: white;
     font-weight: 500;
     &:hover {
         color: lighten(orange, 15%);
