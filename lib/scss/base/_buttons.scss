@@ -1,0 +1,59 @@
+//--------------------------------
+//Button layouts for DALLAR
+//--------------------------------
+.btnbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    &--hero {
+        max-width: 35%;
+        .btn { width: 45%; }
+    }
+}
+
+.btn {
+    text-align: center;
+    font-size: 1.1em;
+    border-radius: 2px;
+    margin: 20px auto;
+    width: 20%;
+
+    cursor: pointer;
+    a { display: block; padding: 15px 30px; }
+
+    &--cta {
+        background: linear-gradient($gold, darken($gold, 5%));
+        color: $background;
+        border: 1px solid $gold;
+        a { color: $background; }
+        &:hover {
+            background: lighten($gold, 5%);
+            border: 1px solid darken($gold, 5%);
+            a { color: $background; }
+        }
+    }
+
+    &--alt {
+        background: 0;
+        color: white;
+        border: 1px solid white;
+        a { color: white; }
+        &:hover {
+            background: white;
+            border: 1px solid white;
+            a { color: $background; }
+        }
+    }
+
+    &--disabled {
+        background: 0;
+        color: darken(white, 65%);
+        border: 1px solid darken(white, 65%);
+        a { color: darken(white, 65%); }
+        &:hover {
+            background: 0;
+            border: 1px solid darken(white, 65%);
+            a { color: darken(white, 65%); }
+        }
+    }
+}

@@ -19,6 +19,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111242241-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111242241-1');
+    </script>
     <div class="wrapper">
 
         <div class="header">
@@ -29,6 +38,7 @@
             <div class="header__right">
                 <ul class="nav">
                     <a href="#about"><li class="nav__li">GET STARTED</li></a>
+                    <a href="#wallet"><li class="nav__li">WALLET</li></a>
                     <a href="#mining"><li class="nav__li">MINING</li></a>
                     <a href="#blockchain"><li class="nav__li">BLOCKCHAIN INFO</li></a>
                     <a href="http://dallar.org/whitepaper.pdf" target="_blank"><li class="nav__li">WHITEPAPER</li></a>
@@ -42,24 +52,36 @@
                 <div class="row">
                     <img src="lib/images/dallar.png" alt="">
                     <h2>A cryptocurrency by a group of Game Developers, Artists and creative types that</h2><h1> wanted to put a price on <span class="gold">giving a fuck.</span></h1>
-                    <ul class="hero__buttons">
-                        <a href="#about"><li class="hero__buttons__button">GET STARTED</li></a>
-                        <a href="https://discord.gg/ZV7CP89" target="_blank"><li class="hero__buttons__button hero__buttons__button--highlighted">JOIN DISCORD</li></a>
+                    <ul class="btnbar btnbar--hero">
+                        <li class="btn btn--cta"><a href="#">GET STARTED</a></li>
+                        <li class="btn btn--discord"><a href="#">DISCORD</a></li>
                     </ul>
                 </div>
             </div>
             <div class="hero__scroll"></div>
         </div>
 
-        <section id="about" class="sect">
+        <section id="about" class="sect sect--alt">
             <div class="sect__inner sect--center">
                 <h1>ABOUT DALLAR</h1>
                 <p>The Dallar (DAL) is a fully functional blockchain to keep track of how many fucks you give. Unlike other cryptocurrencies, it was never intended to carry any real value. It is essentially a piece of group commentary that was meant to satirize the popular cryptocurrency trend, and is now a cultural experiment to Poe's Law.</p>
                 <p>To give a DAL is to give a fuck.</p>
                 <p>To fully understand how our blockchain works, we invite you to read our white paper.</p>
-                <ul class="buttonbar">
-                    <a href="https://github.com/dallar-project/dallar/releases" target="_blank"><li class="buttonbar__button buttonbar__button">Download Wallet</li></a>
-                    <a href="http://dallar.org/whitepaper.pdf" target="_blank"><li class="buttonbar__button buttonbar__button--alt">Dallar Whitepaper</li></a>
+                <ul class="btnbar">
+                    <li class="btn btn--alt"><a href="http://dallar.org/whitepaper.pdf" target="_blank">Dallar Whitepaper</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="wallet" class="sect">
+            <div class="sect__inner sect--center">
+                <h1>WALLET</h1>
+                <p>Awesome text about the Dallar Wallet here.</p>
+                <ul class="btnbar">
+                    <li class="btn btn--alt"><a href="https://github.com/dallar-project/dallar/releases" target="_blank"><i class="fa fa-windows"></i> Windows</a></li>
+                    <li class="btn btn--disabled"><a><i class="fa fa-linux"></i> Linux</a></li>
+                    <li class="btn btn--alt"><a href="https://github.com/dallar-project/dallar/releases" target="_blank"><i class="fa fa-apple"></i> OSX</a></li>
+                    <li class="btn btn--alt"><a href="https://github.com/dallar-project/dallar/" target="_blank"><i class="fa fa-github"></i> GITHUB</a></li>
                 </ul>
             </div>
         </section>
