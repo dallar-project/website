@@ -3,9 +3,12 @@
     <img src="../images/logo-square-red.png" style="width:320px" alt="Dallar">
     <h3>A cryptocurrency by a group of Game Developers, Artists and creative types that</h3>
     <h2>WANTED TO PUT A PRICE ON GIVING A FUCK.</h2>
-    <button class="btn btn-outline" style="color:white;border-color:white">Get Started</button>
-    <span style="width:42px"></span>
-    <button class="btn btn-primary" (click)="discordInvite()" id="primaryButton">Join Discord</button>
+    <div>
+        <br/>
+        <button class="btn btn-outline" style="color:white;border-color:white">Get Started</button>
+        <span style="width:42px"></span>
+        <button class="btn btn-primary" (click)="discordInvite()" id="primaryButton">Join Discord</button>
+    </div>
     <hr style="margin-top:62px">
     <h2 id="about">ABOUT DALLAR</h2>
     <h5>The Dallar (DAL) is a fully functional blockchain to keep track of how many fucks you give. Unlike other cryptocurrencies,
@@ -16,9 +19,12 @@
         <br/>
         <br/> To fully understand how our blockchain works, we invite you to read our white paper.
     </h5>
-    <button class="btn btn-outline" (click)="openWallet()" style="color:white;border-color:white">Wallet</button>
-    <span style="width:42px"></span>
-    <button class="btn btn-primary" id="primaryButton" (click)="openWhitepaper()">Whitepaper</button>
+    <div>
+        <br/>
+        <button class="btn btn-outline" (click)="openWallet()" style="color:white;border-color:white">Wallet</button>
+        <span style="width:42px"></span>
+        <button class="btn btn-primary" id="primaryButton" (click)="openWhitepaper()">Whitepaper</button>
+    </div>
     <hr style="margin-top:62px">
     <h2 id="mining">MINING</h2>
     <h5 id="about-text">You can earn DAL through mining, showing up early pays off! We believe strongly in the decentralization of our network.
@@ -27,9 +33,12 @@
         <br/> Instructions on getting started can be found on our Discord server. Currently only Nvidia GPUs are supported, with
         AMD GPU support coming in as top priority.
     </h5>
-    <button class="btn btn-outline" (click)="openNvidiaMiner()" style="color:white;border-color:white">NVIDIA Miner</button>
-    <span style="width:42px"></span>
-    <button class="btn btn-outline" style="color:white;border-color:white" [disabled]="true">AMD Miner</button>
+    <div>
+        <br/>
+        <button class="btn btn-outline" (click)="openNvidiaMiner()" style="color:white;border-color:white">NVIDIA Miner</button>
+        <span style="width:42px"></span>
+        <button class="btn btn-outline" style="color:white;border-color:white" [disabled]="true">AMD Miner</button>
+    </div>
     <hr style="margin-top:62px">
     <h2 id="blockchain">BLOCKCHAIN INFORMATION</h2>
     <table class="table table-vertical" style="margin-left:180px;margin-right:180px; width:50%">
