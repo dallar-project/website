@@ -1,18 +1,20 @@
 <clr-main-container>
   <clr-header>
-    <div class="branding">      
-        <img src="../images/dallar_logo.png" style="width:60px" alt="Dallar">
-        <span class="title">DALLAR</span>
+    <div class="branding">     
+        <a [routerLink]="['/home']" routerLinkActive="active">
+          <img src="../images/dallar_logo.png" style="width:60px" alt="Dallar">
+          <span class="title">DALLAR</span>
+        </a> 
         <span id="subtitle">A CRYPTOCURRENCY TO KEEP TRACK OF HOW MANY FUCKS YOU GIVE</span>
     </div>
     <span class="space-filler"></span>
       <div class="header-nav" [clr-nav-level]="1">
-        <div >
-            <button class="btn btn-link">Get Started</button>
-            <button class="btn btn-link">Mining</button>
-            <button class="btn btn-link">Blockchain Info</button>
-            <button class="btn btn-link">Whitepaper</button>
-            <button class="btn btn-primary" id="headerPrimaryButton" >Discord</button>
+        <div>
+            <button class="btn btn-link" (click)="onNavClick('about')">Get Started</button>
+            <button class="btn btn-link" (click)="onNavClick('mining')">Mining</button>
+            <button class="btn btn-link" (click)="onNavClick('blockchain')">Blockchain Info</button>
+            <button class="btn btn-link" (click)="openWhitepaper()">Whitepaper</button>
+            <button class="btn btn-primary" (click)="discordInvite()" id="headerPrimaryButton" >Discord</button>
         </div>
       </div>
   </clr-header>
