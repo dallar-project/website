@@ -1,0 +1,53 @@
+// Copyright (c) 2016 VMware, Inc. All Rights Reserved.
+// This software is released under MIT license.
+// The full license information can be found in LICENSE in the root directory of this project.
+.h3 {
+    text-align: center;
+}
+
+#about-text {
+    margin-left:242px;
+    margin-right:242px;
+}
+
+#home-title {
+    width: 100%;    
+}
+
+#primaryButton {
+    color: black;   
+    background-color: white; 
+    border-color: white;
+}
+
+#primaryButton:hover {
+  color: darkgray;    
+}
+
+#primaryButton:active {
+  color: lightgray; 
+  border-color:white;  
+}
+
+#primaryButton:focus {
+  color: lightgray; 
+  border-color:white;  
+}
+
+.btn-link {
+    color: white;    
+}
+
+.btn-link:hover {
+  color: lightgray;    
+}
+
+.btn-link:active {
+  color: gray; 
+  border-color:white;  
+}
+
+.btn-link:focus {
+  color: gray; 
+  border-color:white;  
+}

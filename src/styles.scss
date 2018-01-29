@@ -1,0 +1,24 @@
+// Clarity Dependency SCSS
+@import "../node_modules/@clr/ui/src/utils/dependencies.clarity"; // Includes light theme
+@import "../node_modules/@clr/ui/src/utils/theme.dark.clarity"; // Overwrites with dark theme
+
+
+@import "theme.scss";
+
+// Clarity Component SCSS
+@import "../node_modules/@clr/ui/src/utils/components.clarity";
+
+
+// Mobile header 'Poo' fix
+@media screen and (max-width: map-get($clr-breakpoints, small)) {
+    .main-container {
+
+        .header {
+            .branding {
+                max-width: 6.5rem;
+                min-width: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}

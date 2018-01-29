@@ -1,0 +1,24 @@
+<clr-main-container>
+  <clr-header>
+    <div class="branding">      
+        <img src="../images/dallar_logo.png" style="width:60px" alt="Dallar">
+        <span class="title">DALLAR</span>
+        <span id="subtitle">A CRYPTOCURRENCY TO KEEP TRACK OF HOW MANY FUCKS YOU GIVE</span>
+    </div>
+    <span class="space-filler"></span>
+      <div class="header-nav" [clr-nav-level]="1">
+        <div >
+            <button class="btn btn-link">Get Started</button>
+            <button class="btn btn-link">Mining</button>
+            <button class="btn btn-link">Blockchain Info</button>
+            <button class="btn btn-link">Whitepaper</button>
+            <button class="btn btn-primary" id="headerPrimaryButton" >Discord</button>
+        </div>
+      </div>
+  </clr-header>
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</clr-main-container>

@@ -1,0 +1,66 @@
+// Copyright (c) 2016 VMware, Inc. All Rights Reserved.
+// This software is released under MIT license.
+// The full license information can be found in LICENSE in the root directory of this project.
+
+.space-filler {
+  flex: 1 1 auto;
+}
+
+#subtitle {
+  font:'Montserrat';
+  font-size: 24px;
+  color: white;
+  margin-left: 4px;
+}
+
+#subtitle {
+  font:'Montserrat';
+  font-size: 12px;
+  color: white;
+  margin-left: 24px;
+  align-self: center;
+}
+
+.header-nav {
+  margin: 4px;
+  display: block;
+  float:right;
+}
+
+#headerPrimaryButton {
+    color: black;   
+    background-color: white; 
+    border-color: white;
+}
+
+#headerPrimaryButton:hover {
+  color: darkgray;    
+}
+
+#headerPrimaryButton:active {
+  color: lightgray; 
+  border-color:white;  
+}
+
+#headerPrimaryButton:focus {
+  color: lightgray; 
+  border-color:white;  
+}
+
+.btn-link {
+    color: white;    
+}
+
+.btn-link:hover {
+  color: lightgray;    
+}
+
+.btn-link:active {
+  color: gray; 
+  border-color:white;  
+}
+
+.btn-link:focus {
+  color: gray; 
+  border-color:white;  
+}
