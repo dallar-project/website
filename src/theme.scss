@@ -17,4 +17,50 @@ $clr-font-weights: (
     color: white;
     font: $clr-font;
     border-color: white
+};
+
+$clr-black: #000000;
+$clr-white: #ffffff;
+
+$clr-red-lightest: #E5A2A2;
+$clr-red-lighter: #E5696B;
+$clr-red-light: #E54149;
+$clr-red-light-midtone: #D9162B;
+$clr-red: #c31427;
+$clr-red-dark-midtone: #c92100;
+$clr-red-dark: #a32100;
+$clr-red-darker: #7d2100;
+$clr-red-darkest: #642100;
+
+// Default button
+$clr-btn-default-outline-color: #ffffff; // border-color, color, checked-background-color
+$clr-btn-default-outline-bg-color: transparent; // background-color, disabled-background-color
+$clr-btn-default-outline-hover-bg-color: hsla(0, 0%, 100%, 0.1); // hover-background-color
+$clr-btn-default-outline-hover-color: $clr-red-lighter; // hover-color
+$clr-btn-default-outline-box-shadow-color: $clr-black; // active-box-shadow-color
+$clr-btn-default-outline-checked-color: $clr-white; // checked-color
+//$clr-btn-default-outline-disabled-color: $clr-btn-outline-disabled-font-color;                  // disabled-color
+//$clr-btn-default-outline-disabled-border-color: $clr-btn-disabled-border-color;             // disabled-border-color
+//$clr-btn-default-outline-checked-color: $clr-btn-disabled-bg-color;
+
+// Primary button
+$clr-btn-primary-color: $clr-white; // color, checked-background-color
+$clr-btn-primary-bg-color: $clr-red; // background-color, disabled-background-color
+$clr-btn-primary-border-color: $clr-red; // border-color
+$clr-btn-primary-hover-bg-color: $clr-red; // hover-background-color
+$clr-btn-primary-hover-color: $clr-white; // hover-color
+$clr-btn-primary-box-shadow-color: $clr-red-darkest; // active-box-shadow-color
+$clr-btn-primary-checked-color: $clr-white; // checked-color
+//$clr-btn-primary-disabled-color: $clr-btn-disabled-font-color;                  // disabled-color
+//$clr-btn-primary-disabled-bg-color: $clr-btn-disabled-bg-color;                  // disabled-bg-color
+//$clr-btn-primary-disabled-border-color: $clr-btn-disabled-border-color;             // disabled-border-color
+
+.header {
+
+    .header-hamburger-trigger {
+        display: none;
+    }
+    .branding {
+        max-width: 100% !important;
+    }
 }

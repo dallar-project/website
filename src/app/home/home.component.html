@@ -1,76 +1,186 @@
-<div align="center" style="margin-left:80px;margin-right:80px">
-    <h1 style="font-weight:400;font-size:86px;margin-top:76px;margin-bottom:24px" class="animated fadeIn">DALLAR</h1>
-    <img src="../images/logo-square-red.png" style="width:320px" alt="Dallar">
-    <h3>A cryptocurrency by a group of Game Developers, Artists and creative types that</h3>
-    <h2>WANTED TO PUT A PRICE ON GIVING A FUCK.</h2>
-    <div>
-        <br/>
-        <button class="btn btn-outline" style="color:white;border-color:white">Get Started</button>
-        <span style="width:42px"></span>
-        <button class="btn btn-primary" (click)="discordInvite()" id="primaryButton">Join Discord</button>
+<div class="row">
+    <div class="col-md-12">
+        <div class="intro">
+            <img src="../images/logo-square-white.png" alt="Dallar Logo">
+            <h2>Dallar is a cryptocurrency by a group of Game Developers, Artists and creative types that wanted to let you</h2>
+            <h1>GIVE A FUCK.</h1>
+            <br/>
+            <button class="btn btn-primary" (click)="discordInvite()" id="primaryButton">Join The Dallar Discord</button>
+            <br/>
+            <br/>
+        </div>
     </div>
-    <hr style="margin-top:62px">
-    <h2 id="about">ABOUT DALLAR</h2>
-    <h5>The Dallar (DAL) is a fully functional blockchain to keep track of how many fucks you give. Unlike other cryptocurrencies,
-        it was never intended to carry any real value. It is essentially a piece of group commentary that was meant to satirize
-        the popular cryptocurrency trend, and is now a cultural experiment to Poe's Law.
-        <br/>
-        <br/> To give a DAL is to give a fuck.
-        <br/>
-        <br/> To fully understand how our blockchain works, we invite you to read our white paper.
-    </h5>
-    <div>
-        <br/>
-        <button class="btn btn-outline" (click)="openWallet()" style="color:white;border-color:white">Wallet</button>
-        <span style="width:42px"></span>
-        <button class="btn btn-primary" id="primaryButton" (click)="openWhitepaper()">Whitepaper</button>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                About Dallar
+            </div>
+            <div class="card-block">
+                <p>
+                    The Dallar (DAL) is a fully functional blockchain to keep track of how many fucks you give. Unlike other cryptocurrencies,
+                    it was never intended to carry any real value. It is essentially a piece of group commentary that was meant to satirize
+                    the popular cryptocurrency trend, and is now a cultural experiment to Poe's Law.
+                </p>
+                <p>
+                    To give a DAL is to give a fuck.
+                </p>
+                <p>
+                    Our blockchain is essentially a fork of Groestlcoin, except our chain proof-of-work algorithm requires three rounds of Groestl hashing, an algorithm which we've named "throestl".
+                </p>
+                <p>
+                    To fully understand our origin and purpose, we invite you to read our whitepaper. 
+                </p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline" id="primaryButton" (click)="openWhitepaper()">Download Dallar Whitepaper</button>
+            </div>
+        </div>
     </div>
-    <hr style="margin-top:62px">
-    <h2 id="mining">MINING</h2>
-    <h5 id="about-text">You can earn DAL through mining, showing up early pays off! We believe strongly in the decentralization of our network.
-        You too can become a foundational contributor to our community and blockchain.
-        <br/>
-        <br/> Instructions on getting started can be found on our Discord server. Currently only Nvidia GPUs are supported, with
-        AMD GPU support coming in as top priority.
-    </h5>
-    <div>
-        <br/>
-        <button class="btn btn-outline" (click)="openNvidiaMiner()" style="color:white;border-color:white">NVIDIA Miner</button>
-        <span style="width:42px"></span>
-        <button class="btn btn-outline" style="color:white;border-color:white" [disabled]="true">AMD Miner</button>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Dallar Wallets
+            </div>
+            <div class="card-block">
+                <p>
+                    We currently have wallet clients for PC, OSX, and Android. iOS is coming soon. 
+                </p>
+                <p>
+                    Our desktop wallets are based on the original Bitcoin QT Core Wallet (forked from Groestlcoin's codebase). They serve
+                    as fully functional network nodes that help decentralize the blockchain.
+                </p>
+                <p>
+                    Our available mobile wallets are based on BitPay's open-source mobile wallet Copay. While this wallet never releases
+                    your wallet's private keys, it still requires a connection to a web server to update and send transactions. A fully decentralized
+                    mobile wallet forked from BreadWallet is on our roadmap.
+                </p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline btn-icon" (click)="downloadWallet('pc')"><i class="fab fa-windows"></i>&nbsp;PC</button>
+                <button class="btn btn-outline btn-icon" (click)="downloadWallet('osx')"><i class="fab fa-apple"></i>&nbsp;OSX</button>
+                <button class="btn btn-outline btn-icon" (click)="downloadWallet('android')"><i class="fab fa-android"></i>&nbsp;Android</button>
+                <button class="btn btn-outline btn-icon" (click)="downloadWallet('ios')" [disabled]=true><i class="fab fa-app-store-ios"></i>&nbsp;iOS</button>
+                <br/><br/>
+                <button class="btn btn-outline btn-icon" (click)="downloadWallet('source-desktop')"><i class="fab fa-github"></i>&nbsp;Desktop Source</button>
+                <button class="btn btn-outline btn-icon" (click)="downloadWallet('source-copay')"><i class="fab fa-github"></i>&nbsp;Mobile Source</button>
+            </div>
+        </div>
     </div>
-    <hr style="margin-top:62px">
-    <h2 id="blockchain">BLOCKCHAIN INFORMATION</h2>
-    <table class="table table-vertical" style="margin-left:180px;margin-right:180px; width:50%">
-        <tbody>
-            <tr>
-                <th>Algorithm</th>
-                <td>Throestl</td>
-            </tr>
-            <tr>
-                <th>Premine</th>
-                <td>200,000 (0.7% of 1 year total)</td>
-            </tr>
-            <tr>
-                <th>Block Rewards</th>
-                <td>256 reducing 6% every 10080 blocks (1 week)</td>
-            </tr>
-            <tr>
-                <th>Block Spacing</th>
-                <td>1 minute</td>
-            </tr>
-            <tr>
-                <th>Difficulty adjustment</th>
-                <td>Standard bitcoin adjustment every 5 blocks until block 10000, then hopeful switch to DGW3 for every block.</td>
-            </tr>
-            <tr>
-                <th>Total DAL after 1 year</th>
-                <td>28,566,720</td>
-            </tr>
-            <tr>
-                <th>Supported Platforms</th>
-                <td>Wallet Core available for Windows, Linux, OSX</td>
-            </tr>
-        </tbody>
-    </table>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                About The Logo
+            </div>
+            <div class="card-block">
+                <p>
+                    Our logo is the Korean word for "moon", which is spelled "dal" when typing Korean on an English keyboard.
+                    It is inscribed within a circle that symbolizes the moon.
+                </p>
+                <p>
+                    We always try to use either a white or red Dallar logo, white being the moon's natural color as well as red being reminiscent of a blood moon.
+                    The red color is specifically #C31427, which is sampled directly from the NASA Graphics Standard Manual created in 1976.
+                </p>
+                <p>
+                    Dallar is still very much a work in progress, including its branding, so these and all other details may change in the future.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Blockchain Information
+            </div>
+            <div class="card-block">
+                <table class="table table-vertical">
+                    <tbody>
+                        <tr>
+                            <th>Algorithm</th>
+                            <td>Throestl</td>
+                        </tr>
+                        <tr>
+                            <th>Premine</th>
+                            <td>200,000 (0.7% of 1 year total)</td>
+                        </tr>
+                        <tr>
+                            <th>Block Rewards</th>
+                            <td>256 reducing 6% every 10080 blocks (1 week)</td>
+                        </tr>
+                        <tr>
+                            <th>Block Spacing</th>
+                            <td>1 minute</td>
+                        </tr>
+                        <tr>
+                            <th>Difficulty adjustment</th>
+                            <td>Standard bitcoin adjustment every 6 blocks.</td>
+                        </tr>
+                        <tr>
+                            <th>Total DAL after 1 year</th>
+                            <td>28,566,720</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Mining
+            </div>
+            <div class="card-block">
+                <p>
+                    Currently the easiest way to get some Dallar is to mine it. More ways to acquire Dallar are on our roadmap.
+                </p>
+                <p>
+                    Mining Dallar essentially means turning your desktop's Graphics Card into a math cruncher, turning electrical power and Dallar transactions  into
+                    mathematical guesses, hopefully which end up being a magical number that our blockchain will accept.
+                </p>
+                <p>
+                    Currently we only offer two miners. More miners and an effort to simplify getting started with mining is on our roadmap.
+                </p>
+                <p>
+                    One is a CUDA miner based on CCminer that requires Windows and relatively recent Nvidia GPU with up-to-date drivers.
+                </p>
+                <p>
+                    The other is an AMD miner based on sgminer which requires Windows and an AMD GPU with up-to-date drivers.
+                </p>
+                <p>
+                    For help with mining, please join <a href="https://discord.gg/ZV7CP89">our Discord</a> for help.
+                </p>
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-outline btn-icon" (click)="downloadMiner('nvidia')">&nbsp;NVIDIA Miner</button>
+                <button class="btn btn-outline btn-icon" (click)="downloadMiner('amd')">&nbsp;AMD Miner</button>
+                <br/><br/>
+                <button class="btn btn-outline btn-icon" (click)="downloadMiner('source-nvidia')"><i class="fab fa-github"></i>&nbsp;NVIDIA Source</button>
+                <button class="btn btn-outline btn-icon" (click)="downloadMiner('source-amd')"><i class="fab fa-github"></i>&nbsp;AMD Source</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                Additional Tools
+            </div>
+            <div class="card-block">
+                <p>
+                    Check out our official mining pool at <a href="http://pool.dallar.org">The Dallar Pool</a>.
+                </p>
+                <p>
+                    Inspect our blockchain with our <a href="https://explorer.dallar.org">Dallar Block Explorer</a>.
+                </p>
+                <p>
+                    Interested in branding? Check out our <a href="https://github.com/dallar-project/branding">Dallar Branding Guide</a>.
+                </p>
+                <p>
+                    And also check out our roadmap, whenever we have some time to sit down and create a user-friendly roadmap display.
+                </p>
+            </div>
+        </div>
+    </div>
 </div>

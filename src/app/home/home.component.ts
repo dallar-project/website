@@ -15,8 +15,41 @@ export class HomeComponent {
         window.open('http://www.dallar.org/whitepaper.pdf');
     }
 
-    openWallet() {
-        window.open('https://github.com/dallar-project/dallar/releases');
+    downloadWallet(wallet: string) {
+        switch (wallet) {
+            case "pc":
+                window.open('https://github.com/dallar-project/dallar/releases/download/1.3.0/Dallar-x64.zip');
+                break;
+            case "osx":
+                window.open('https://github.com/dallar-project/dallar/releases/download/1.3.0/Dallar-Qt.dmg');
+                break;
+            case "android":
+                window.open('https://play.google.com/store/apps/details?id=org.dallar.dallar');
+                break;
+            case "source-desktop":
+                window.open('https://github.com/dallar-project/dallar/');
+                break;
+            case "source-copay":
+                window.open('https://github.com/dallar-project/copay/');
+                break;
+        }
+    }
+
+    downloadMiner(wallet: string) {
+        switch (wallet) {
+            case "nvidia":
+                window.open('https://github.com/dallar-project/ccminer/files/1596594/ccminer-x64.zip');
+                break;
+            case "amd":
+                window.open('https://github.com/dallar-project/sgminer/releases/download/d1.0/sgminer-x86.zip');
+                break;
+            case "source-nvidia":
+                window.open('https://github.com/dallar-project/ccminer/');
+                break;
+            case "source-amd":
+                window.open('https://github.com/dallar-project/sgminer/');
+                break;
+        }
     }
 
     discordInvite() {

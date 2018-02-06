@@ -5,25 +5,26 @@
           <img src="../images/dallar_logo.png" style="width:60px" alt="Dallar">
           <span class="title">DALLAR</span>
         </a> 
-        <span id="subtitle">A CRYPTOCURRENCY TO KEEP TRACK OF HOW MANY FUCKS YOU GIVE</span>
+        <span class="subtitle">GIVE A FUCK ABOUT GAME DEVELOPERS</span>
     </div>
     <span class="space-filler"></span>
       <div class="header-nav" [clr-nav-level]="1">
         <div>
+            <!--
             <button class="btn btn-link" (click)="onNavClick('about')">Get Started</button>
             <button class="btn btn-link" (click)="onNavClick('mining')">Mining</button>
             <button class="btn btn-link" (click)="onNavClick('blockchain')">Blockchain Info</button>
             <button class="btn btn-link" (click)="openWhitepaper()">Whitepaper</button>
-            <button class="btn btn-primary" (click)="discordInvite()" id="headerPrimaryButton" >Discord</button>
+            -->
+            <button class="btn btn-primary" (click)="discordInvite()">Discord</button>
         </div>
       </div>
   </clr-header>
   <div class="content-container">
     <div class="content-area">
       <router-outlet></router-outlet>
-      <footer align="center" style="background-color:#c31427;margin-left:-100px;margin-right:-100px;margin-bottom:-42px;">
-        <h2 >DALLAR</h2>
-        <span id="subtitle">A CRYPTOCURRENCY TO KEEP TRACK OF HOW MANY FUCKS YOU GIVE</span>
+      <footer align="center">
+        <h2>DALLAR</h2>
       </footer>
     </div>
   </div>

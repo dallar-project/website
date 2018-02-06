@@ -3,22 +3,34 @@
 @import "../node_modules/@clr/ui/src/utils/theme.dark.clarity"; // Overwrites with dark theme
 
 
+
 @import "theme.scss";
 
 // Clarity Component SCSS
 @import "../node_modules/@clr/ui/src/utils/components.clarity";
 
 
+.intro {
+    text-align: center;
+    img {
+        width: 80%;
+        max-width: 20rem;
+    }
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
 // Mobile header 'Poo' fix
 @media screen and (max-width: map-get($clr-breakpoints, small)) {
     .main-container {
+        .subtitle {
+            display: none;
+        }
 
-        .header {
-            .branding {
-                max-width: 6.5rem;
-                min-width: 0;
-                overflow: hidden;
-            }
+        .intro {
+            padding-left: 0;
+            padding-right: 0;
         }
     }
 }
