@@ -22,7 +22,7 @@
 
 
 // Mobile header 'Poo' fix
-@media screen and (max-width: map-get($clr-breakpoints, small)) {
+@media screen and (max-width: map-get($grid-breakpoints, small)) {
     .main-container {
         .subtitle {
             display: none;

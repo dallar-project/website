@@ -10,3 +10,4 @@ typings/
 .npmrc
 
 yarn\.lock
+package-lock.json
