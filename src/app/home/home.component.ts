@@ -59,4 +59,15 @@ export class HomeComponent {
     openNvidiaMiner() {
         window.open('https://github.com/dallar-project/ccminer/releases');
     }
+
+    openExchange(exchange) {
+        switch(exchange) {
+            case "digitalprice":
+                window.open('https://digitalprice.io/order?url=dal-btc');
+                break;
+            default:
+                console.error("How the fuck did you get here?");
+                break;
+        }   
+    }
 }
