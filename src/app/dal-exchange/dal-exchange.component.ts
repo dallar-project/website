@@ -30,6 +30,7 @@ export class DalExchangeComponent {
 
     onAmountUpdate(value: string) {
         this.amount = +value;
+        this.runConversion();
     }
 
     runConversion() {
