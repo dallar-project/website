@@ -1,0 +1,34 @@
+<div class="card">
+    <div class="card-header">
+        <clr-icon shape="coin-bag"></clr-icon>
+        Dallar Conversion Tool
+    </div>
+    <div class="card-block">
+        <form clrForm>
+            <div>
+                <label class="required">Amount:</label>
+                <br/>
+                <input type="text" id="requiredInput" [value]="amount" (blur)="onAmountUpdate($event.target.value)">
+            </div>
+            <br/>
+            From:
+            <div class="select">
+                <select [value]="selectedFromValue" (change)="updateSelectedFrom($event.target.value)">
+                    <option *ngFor="let item of currencies">{{item}}</option>
+                </select>
+            </div>
+            <br/>
+            To:
+            <div class="select">
+                <select [value]="selectedToValue" (change)="updateSelectedTo($event.target.value)">
+                    <option *ngFor="let item of currencies">{{item}}</option>
+                </select>
+            </div>
+            <br/>    
+            <div>
+                <h4>{{selectedToValue}} {{result.toFixed(12) | currency:' : ':'code':'0.2-12'}}</h4>
+            </div>   
+            <br/>     
+        </form>
+    </div>
+</div>
