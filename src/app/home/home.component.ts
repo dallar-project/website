@@ -66,7 +66,7 @@ export class HomeComponent {
                 window.open('https://digitalprice.io/order?url=dal-btc');
                 break;
             default:
-                console.error("How the fuck did you get here?");
+                console.error("How the lemon did you get here?");
                 break;
         }   
     }
